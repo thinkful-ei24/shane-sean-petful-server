@@ -10,7 +10,7 @@ const { PORT, CLIENT_ORIGIN } = require('./config');
 const petRouter = require('./routes/pets');
 
 const app = express();
-app.use('/api', petRouter);
+
 
 app.use(
   morgan(process.env.NODE_ENV === 'production' ? 'common' : 'dev', {
@@ -23,6 +23,8 @@ app.use(
     origin: CLIENT_ORIGIN
   })
 );
+
+app.use('/api', petRouter);
 
 
 function runServer(port = PORT) {

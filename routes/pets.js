@@ -87,12 +87,19 @@ petRouter.get('/dog', (req, res, next) => {
 })
 
 petRouter.delete('/cat', (req, res, next) => {
+  if(!catQ.next) {
+    catArr.forEach(cat => { catQ.enqueue(cat) });
+    res.sendStatus(204);
+  }
   catQ.dequeue();
 })
 
 petRouter.delete('/dog', (req, res, next) => {
+  if(!dogQ.next) {
+    dogArr.forEach(dog => { dogQ.enqueue(dog) });
+    res.sendStatus(204);
+  }
   dogQ.dequeue();
 })
-
 
 module.exports = petRouter;
