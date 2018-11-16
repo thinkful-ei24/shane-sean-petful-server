@@ -2,7 +2,7 @@
 # Petful app
 
 [Direct server link](https://petful-server.now.sh)
-Endpoints:
+Endpoints:<br>
 * /api/cat
 * /api/dog
 
