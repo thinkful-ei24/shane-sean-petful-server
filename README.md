@@ -1,7 +1,10 @@
 
 # Petful app
 
-[Live project link](https://petful-client.now.sh)
+[Direct server link](https://petful-server.now.sh)
+Endpoints:
+/api/cat
+/api/dog
 
 # Summary
 
