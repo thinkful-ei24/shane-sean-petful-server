@@ -5,10 +5,12 @@ const cors = require('cors');
 const morgan = require('morgan');
 
 const { PORT, CLIENT_ORIGIN } = require('./config');
-const { dbConnect } = require('./db-mongoose');
+// const { dbConnect } = require('./db-mongoose');
 // const {dbConnect} = require('./db-knex');
+const petRouter = require('./routes/pets');
 
 const app = express();
+app.use('/api', petRouter);
 
 app.use(
   morgan(process.env.NODE_ENV === 'production' ? 'common' : 'dev', {
@@ -22,6 +24,11 @@ app.use(
   })
 );
 
+// app.get('/cat', (req, res, next) => {
+//   console.log(catArr);
+//   return res.json(catArr[0])
+// })
+
 function runServer(port = PORT) {
   const server = app
     .listen(port, () => {
@@ -34,8 +41,10 @@ function runServer(port = PORT) {
 }
 
 if (require.main === module) {
-  dbConnect();
+  //dbConnect();
   runServer();
 }
 
-module.exports = { app };
+module.exports =  app;
+
+
