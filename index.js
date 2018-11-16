@@ -24,10 +24,6 @@ app.use(
   })
 );
 
-// app.get('/cat', (req, res, next) => {
-//   console.log(catArr);
-//   return res.json(catArr[0])
-// })
 
 function runServer(port = PORT) {
   const server = app

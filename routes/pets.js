@@ -79,11 +79,11 @@ const dogArr = [{
 dogArr.forEach(dog => { dogQ.enqueue(dog) });
 
 petRouter.get('/cat', (req, res, next) => {
-  return res.json(catQ.peek())
+  return res.json(catQ.peek());
 })
 
 petRouter.get('/dog', (req, res, next) => {
-  return res.json(dogQ.peek())
+  return res.json(dogQ.peek());
 })
 
 petRouter.delete('/cat', (req, res, next) => {
