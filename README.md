@@ -3,8 +3,8 @@
 
 [Direct server link](https://petful-server.now.sh)
 Endpoints:
-*/api/cat
-*/api/dog
+* /api/cat
+* /api/dog
 
 # Summary
 
