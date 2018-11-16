@@ -1,0 +1,5 @@
+{
+  "env":  {
+    "CLIENT_ORIGIN": "https://petful-client.now.sh"
+  }
+}
